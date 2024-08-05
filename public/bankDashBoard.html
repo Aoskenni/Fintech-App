@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bankDashBoard.css">
+    <script src="https://kit.fontawesome.com/dfedbc289c.js" crossorigin="anonymous"></script>
+    <title>Dash Board</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="dashBoardLogo"><img src="media/site-logo-white..png" alt="logo" id="dashBoardLogo"></div>
+            <h3 id="headerDisp"></h3>
+            <div class="logOut"><button id="logOut">LogOut User</button></div>
+        </div>
+
+        <div class="display-container">
+            <h4 class="display-time" id="displayTime"></h4>
+            <div class="display-balance" id="displayBalance"></div>
+
+        </div>
+        <div class="display-btn">
+            <button class="btn-refresh">Refresh Balance</button>
+            <button class="btn-transaction">Transaction History</button>
+        </div>
+        <div class="flex-container">
+            <div class="services-c">
+                <div><img src="media/Sendmoney.png" alt="" id="money"></div>Send money
+            </div>
+            <div class="services-c">
+                <div><img src="media/receivemoney.png" alt="" id="money"></div>Receive money
+            </div>
+            <div class="services-c" id="airtime-data">
+                <div><img src="media/airtimedata.svg" alt="" id="money"></div>Airtime & Data
+            </div>
+            <div class="services-c">
+                <div><img src="media/house-utilities.svg" alt="" id="money"></div>Utilities
+            </div>
+            <div class="services-c">
+                <div><img src="media/paybills.png" alt="" id="money"></div>Pay bills
+            </div>
+            <div class="services-c">
+                <div><img src="media/fx.png" alt="" id="money"></div>FX Trading
+            </div>
+            <div class="services-c">
+                <div><img src="media/travelticket.png" alt="" id="money"></div>Travel Tickets
+            </div>
+            <div class="services-c">
+                <div><img src="media/domicillary.png" alt="" id="money"></div>Domicillary
+            </div>
+
+        </div>
+        <div class="section2">
+            <div class="international-trf">
+                <i class=" arrow fa-solid fa-caret-left fa-fade fa-2xl" style="color: #ffffff;"></i>
+
+            </div>
+            <div class="atm" id="atm">
+                <h2 class="h2">goPAY</h2>
+                <p class="pan-number">0095 662135 94567</p>
+                <img src="media/mastercard1979-removebg-preview.png" alt="" id="masterCard">
+                <img src="media/chip-logo-removebg-preview.png" alt="" id="chip">
+
+            </div>
+
+            <div class="atm-flip" id="atmFlip">
+                <p class="p-flip">AUTHORISED SIGNATURE NOT VALID UNLESS SIGNED</p>
+                <div class="cvv">
+                    <p class="cvv-no">668</p>
+                </div>
+                <div class="flip-issued">
+                    <p>ISSUED BY GOPAY</p>
+                    <p class="click-get">CLICK TO GET!</p>
+                </div>
+            </div>
+            <div class="international-trf">
+                <i class=" arrow fa-solid fa-caret-right fa-fade fa-2xl" style="color: #ffffff;"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD PURCHASE MODAL START -->
+    <div class="card-purchase-container">
+        <div class="div-blur"></div>
+        <div class="card-purchase-modal">
+            <input type="text" placeholder="Card Holder's Full Name" id="cardName">
+            <select id="cardType">
+                <option value="" selected id="selected">Select Card Type</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Debit Card">Debit Card</option>
+            </select>
+            <select id="cardIssuer">
+                <option value="" selected id="selected">Select Card Issuer</option>
+                <option value="1050">Verve</option>
+                <option value="1050">Master Card</option>
+                <option value="1050">Visa</option>
+                <option value="2500">goPay Wallet Card</option>
+            </select>
+            <textarea id="address-card" placeholder="Address"></textarea>
+            <div class="card-purchase-terms"><span>By checking box you agree to our <a href="">terms</a> and <a
+                        href="">conditions</a></span>
+                <input id="checkBox" type="checkbox">
+            </div>
+            <button type="button" id="btnGetCard">Get Card</button>
+        </div>
+    </div>
+    <!-- CARD PURCHASE MODAL ENDS -->
+
+    <!-- AIRTIME & DATA MODAL STARTS -->
+    <div class="airtime-purchase-container">
+        <div class="airtime-div-blur"></div>
+
+        <div class="airtime-purchase-modal">
+            <div class="providers-logo">
+                <img src="media/Mtn-logo-svg.svg" alt="" class="mtn-logo" id="providers-logo">
+                <img src="media/Airtel-Logo.wine.png" alt="" id="providers-logo">
+                <img src="media/globacom-limited-icon.png" alt="" id="providers-logo">
+                <img src="media/9mobile-icon.png" alt="" id="providers-logo">
+            </div>
+            <form action="">
+                <div class="airtime-content">
+                    <label for="select-provider">Network Provider</label>
+                    <select id="select-provider">
+                        <option value="" selected id="selected">--select--</option>
+                        <option value="MTN Nigeria">MTN Nigeria</option>
+                        <option value="Globacom">Globacom</option>
+                        <option value="9mobile">9mobile</option>
+                        <option value="Airtel">Airtel</option>
+                    </select>
+                    <label for="select-service">Choose Service</label>
+                    <select id="select-service">
+                        <option value="" selected>Airtime</option>
+                    </select>
+                    <label for="airtime-amount">Amount</label>
+                    <input type="number" id="airtime-amount">
+                    <label for="user-mobile-number">Beneficiary</label>
+                    <input type="number" id="user-mobile-number">
+                    <div><button type="button" id="purchaseAirtime">Purchase Airtime</button><button type="button"
+                            id="getData">Get Data</button></div>
+                </div>
+            </form>
+            <form action="">
+                <div class="data-content">
+                    <label for="select-provider-data">Network Provider</label>
+                    <select id="select-provider-data">
+                        <option value="" selected id="selected">--select--</option>
+                        <option value="MTN Nigeria">MTN Nigeria</option>
+                        <option value="Globacom">Globacom</option>
+                        <option value="9mobile">9mobile</option>
+                        <option value="Airtel">Airtel</option>
+                    </select>
+                    <label for="select-service-data">Choose Service</label>
+                    <select id="select-service-data">
+                        <option value="" selected>Data</option>
+                    </select>
+                    <label for="data-plan">Data Plan</label>
+                    <select id="data-plan">
+                        <option value="" selected id="selected">--Select--</option>
+                        <option value="1000">2GB (1month)@ #1000</option>
+                        <option value="2000">4GB (1month)@ #2000</option>
+                        <option value="3000">6GB (1month)@ #3000</option>
+                        <option value="4000">8GB (1month)@ #4000</option>
+                        <option value="5000">10GB (1month)@ #5000</option>
+                        <option value="6000">12GB (1month)@ #6000</option>
+                        <option value="8000">20GB (1month)@ #8000</option>
+                        <option value="15000">120GB (1month)@ #15000</option>
+                        <option value="20000">200GB (3month)@ #20000</option>
+                        <option value="35000">500GB (6month)@ #35000</option>
+                        <option value="90000">1000GB (1year)@ #90000</option>
+                        <option value="250000">Unlimited (1year)@ #250000</option>
+                    </select>
+                    <label for="user-mobile-number-data">Beneficiary</label>
+                    <input type="number" id="user-mobile-number-data">
+                    <div><button type="button" id="purchaseData">Purchase Data</button><button type="button"
+                            id="back">back</button></div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- AIRTIME & DATA MODAL ENDS -->
+
+</body>
+<script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+    import {
+        getAuth,
+        onAuthStateChanged,
+
+        signOut
+    } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyCU8HvsDtSPrWrmqhsVpsfNEmR-I1UzKc0",
+        authDomain: "gopayfintech-ef64a.firebaseapp.com",
+        projectId: "gopayfintech-ef64a",
+        storageBucket: "gopayfintech-ef64a.appspot.com",
+        messagingSenderId: "481508257911",
+        appId: "1:481508257911:web:647c06c33164ebafbe5672"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    // Initialize Firebase Authentication and get a reference to the service
+    const auth = getAuth(app);
+    const user = auth.currentUser;
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/auth.user
+            console.log(user);
+            document.getElementById("headerDisp").innerHTML = `<i class="fa-solid fa-circle-user fa-lg" style="color: #ffffff;"></i>  ${user.email}`;
+
+            //DISPLAY TIME
+            const date = new Date();
+            const hour = date.getHours();
+            const min = date.getMinutes();
+            let time = `${hour}:${min}`
+            /*  console.log(time); */
+            let displayTime = document.getElementById('displayTime');
+
+
+            if (user.displayName) {
+                if (hour < 12) {
+
+                    displayTime.innerHTML = `Good Morning, ${user.displayName}!`;
+                } else if (hour >= 12 && hour < 16) {
+                    displayTime.innerHTML = `Good Afternoon, ${user.displayName}!`;
+                } else {
+                    displayTime.innerHTML = `Good Evening, ${user.displayName}!`;
+                }
+            } else {
+                if (hour < 12) {
+
+                    displayTime.innerHTML = "Good Morning, User!";
+                } else if (hour >= 12 && hour < 16) {
+                    displayTime.innerHTML = "Good Afternoon, User!";
+                } else {
+                    displayTime.innerHTML = "Good Evening, User!";
+                }
+            }
+            //DISPLAY TIME ENDS
+
+            //DISPLAY BALANCE STARTS
+            let balance = document.getElementById('displayBalance');
+            let userBalance = 10000;
+
+            balance.innerHTML = `Account Balance: <i class="fa-solid fa-naira-sign" style="color: #ffffff;"></i> ${userBalance}`;
+            //DISPLAY BALANCE ENDS
+
+            //ATM FLIP
+            let atmFront = document.getElementById('atm');
+            let atmFlip = document.getElementById('atmFlip');
+
+            atmFront.addEventListener('mouseover', function () {
+                atmFront.style.display = 'none';
+                atmFlip.style.display = 'block';
+            })
+            atmFlip.addEventListener('mouseout', function () {
+                atmFront.style.display = 'block';
+                atmFlip.style.display = 'none';
+            })
+            //ATM FLIP ENDS
+
+            //ATM CLICk STARTS
+            let cardPurchase = document.querySelector('.card-purchase-container');
+            atmFlip.addEventListener('click', function () {
+                /* alert('working'); */
+                cardPurchase.style.display = 'block';
+            })
+            let divBlur = document.querySelector('.div-blur');
+            divBlur.addEventListener('click', function () {
+                cardPurchase.style.display = 'none';
+            })
+            let mainBalance = balance.innerHTML
+
+            let cardType = document.getElementById('cardType');
+            let cardIssuer = document.getElementById('cardIssuer');
+            let addressCard = document.getElementById('address-card');
+            let checkBox  = document.getElementById('checkBox');
+            let getCardClick = document.getElementById('btnGetCard');
+            getCardClick.addEventListener('click', ()=> {
+               if (cardType.value == "" || cardIssuer.value == "" || addressCard.value == "" ){
+                alert("fields incomplete/empty");
+               }
+                else if (userBalance < cardIssuer.value){
+                    alert('insufficient funds');
+            } else {
+                alert("You will be charged 1050 for this transaction");
+                userBalance -= cardIssuer.value;
+                balance.innerHTML = `Account Balance: <i class="fa-solid fa-naira-sign" style="color: #ffffff;"></i> ${userBalance}`;
+            }   alert("Successful!")
+            }) 
+            //ATM CLICKS ENDS
+
+            //AIRTIME & DATA CLICK STARTS
+            let airtimeData = document.getElementById('airtime-data');
+            let airtimeDataContainer = document.querySelector('.airtime-purchase-container');
+            let getDataBtn = document.getElementById('getData')
+            let backBtn = document.getElementById('back')
+            let airtimeContent = document.querySelector('.airtime-content');
+            let dataContent = document.querySelector('.data-content');
+            let airtimeDivBlur = document.querySelector('.airtime-div-blur');
+
+            airtimeData.addEventListener('click', function () {
+                airtimeDataContainer.style.display = 'block';
+            });
+            getDataBtn.addEventListener('click', function () {
+
+                airtimeContent.style.display = 'none';
+                dataContent.style.display = 'flex';
+            })
+            backBtn.addEventListener('click', function () {
+                airtimeContent.style.display = 'flex';
+                dataContent.style.display = 'none';
+            })
+            airtimeDivBlur.addEventListener('click', function () {
+                airtimeDataContainer.style.display = 'none';
+            })
+            //AIRTIME & DATA CLICKS ENDS
+
+            //PURCHASE AIRTIME & DATA STARTS
+            let selectProvider = document.getElementById('select-provider');
+            let purchaseAirtime = document.getElementById('purchaseAirtime');
+            let airtimeAmount = document.getElementById('airtime-amount');
+            let userMobileNumber = document.getElementById('user-mobile-number');
+
+
+            purchaseAirtime.addEventListener('click', function () {
+                let userMobileNumberValue = userMobileNumber.value;
+
+                if (selectProvider.value == "" || userMobileNumberValue.length != 11) {
+                    alert('Fields invalid/incomplete')
+
+                }
+
+                else if (airtimeAmount.value < 50 || airtimeAmount.value > 100000) {
+                    alert('Amount  should not be less than N50 nor greater than N100,000')
+                }
+                else if (airtimeAmount.value > userBalance) {
+                    alert("Recharge failed, insufficient funds")
+                }
+                else {
+                    alert(`you will be charged N${airtimeAmount.value} for this transaction`)
+                    userBalance -= airtimeAmount.value
+                    alert(`Recharge of #${airtimeAmount.value} to ${userMobileNumber.value} Successful!`)
+                    balance.innerHTML = `Account Balance: <i class="fa-solid fa-naira-sign" style="color: #ffffff;"></i> ${userBalance}`;
+                }
+            })
+
+
+            let purchaseData = document.getElementById('purchaseData');
+            let dataAmount = document.getElementById('data-plan');
+            let selectProviderData = document.getElementById('select-provider-data');
+            let userMobileNumberData = document.getElementById('user-mobile-number-data');
+            purchaseData.addEventListener('click', function () {
+                let userMobileNumberValue = userMobileNumberData.value;
+                if (selectProviderData.value == "" || dataAmount.value == "" || userMobileNumberValue.length != 11) {
+                    alert('Fields invalid/incomplete')
+                }
+
+                else if (dataAmount.value > userBalance) {
+                    alert("Transaction Failed, insufficent funds");
+                } else {
+                    alert(`you will be charged N${dataAmount.value} for this transaction`);
+                    userBalance -= dataAmount.value;
+                    alert(`You have successfully purchased a Data Plan with #${dataAmount.value}`);
+                    balance.innerHTML = `Account Balance: <i class="fa-solid fa-naira-sign" style="color: #ffffff;"></i> ${userBalance}`;
+                    window.location.href = "bankDashBoard.html"
+                }
+            })
+
+
+            //PURCHASE AIRTIME & DATA ENDS
+
+            const logOut = document.getElementById('logOut');
+
+            logOut.addEventListener('click', () => {
+                signOut(auth).then(() => {
+                    alert('LogOut successful');
+                    window.location.href = "signIn.html"
+
+                }).catch((error) => {
+                    alert('error');
+                });
+            })
+
+            // ...
+        } else {
+            // User is signed out
+            window.location.href = "signIn.html"
+            // ...
+        }
+
+
+    });
+</script>
+
+</html>

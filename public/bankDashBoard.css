@@ -1,0 +1,424 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: url( media/web-4710163_1920.jpg) no-repeat center ;
+    
+    
+}
+.container {
+    height: 120vh;
+    margin-top: 50px;
+    background-color: rgba(5, 0, 25, 0.9);
+    position: relative;
+}
+.header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #050629;
+}
+#headerDisp {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+
+#logOut {
+    padding: 10px 10px;
+    background-color: rgba(25, 25, 112, 0.3);
+    color: #ebebeb;
+    border: none;
+    
+}
+#logOut:hover {
+    border: 1px solid rgba(198, 79, 0, 0.4);
+}
+.logOut {
+    margin-right: 40px;
+    margin-top: 7px;
+}
+#displayTime {
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+#displayBalance {
+    color: #fff;
+    font-weight: 400;
+    font-size: 25px;
+    
+    
+}
+.dashBoardLogo {
+    margin-left: 40px;
+}
+#dashBoardLogo {
+    height: 20px; 
+    width:100%;
+    margin: 15px 0;
+} 
+.display-container {
+    height: 150px;
+    width: 50%;
+    background: url(media/blue.png);
+    margin: 20px auto 0 auto;
+    border-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border: 1px solid rgba(219, 219, 219, 0.2);
+    border-top: 1.5px solid #e8e8e8;
+}
+.btn-refresh, .btn-transaction {
+    padding: 10px 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    background: rgba(25, 25, 112, 0.9);
+    color: #fff;
+}
+.display-btn {
+    text-align: center;
+    margin-top:0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.flex-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+    margin: 40px auto;
+    background: transparent;
+    
+}
+.content-left {
+    height: 30vh;
+    background: #0A0A23;
+    width: 50%;
+}
+.content-right {
+    background: black;
+    width: 50%;
+}
+#money {
+    height: 40px;
+    width: 40px;
+}
+.services-c {
+    padding: 14px 0;
+    width: 23%;
+    margin: 5px 0;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.services-c:hover {
+    border: 1px solid #050019;
+    background-color: #fff;
+}
+.section2 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+.cvv {
+    width: 65%;
+    background: #fff;
+    margin-left: 10px;
+}
+.cvv-no {
+    padding: 5px 0;
+    text-align: center;
+    font-style: italic;
+    
+}
+.p-flip {
+    color: #fff;
+    font-size: 8px;
+    margin-top: 60px;
+    margin-left: 10px;
+}
+.flip-issued {
+    text-align: center;
+    color: #fff;
+}
+.flip-issued > p:first-of-type {
+    font-size: 10px;
+} 
+.click-get {
+    font-size: 7px;
+}
+.international-trf {
+    height: 170px;
+    width: 25%;
+    /* border: 2px solid blue; */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.arrow {
+   margin-top: 86px;
+   margin-left: 50%;
+}
+.bullet {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #191970;
+}
+.international-trf > span {
+    color: #fff;
+}
+.atm, .atm-flip {
+    height: 170px;
+    width: 25%;
+    border: 1.5px solid rgb(7, 7, 103);
+    border-radius: 10px;
+    background: #0A0A23;
+    position: relative;
+}
+.atm-flip {
+    display: none;
+}
+.pan-number {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+    /* border: 1px solid red; */
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+#masterCard {
+    height: 50px;
+    width: 50px;
+    margin-top: 0px;
+    margin-left: 5px;
+}
+#chip {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 80%;
+    top: 35px;
+}
+.h2 {
+    margin-top: 5px;
+    color: #fff;
+}
+
+
+/* CARD PURCHASE MODAL STARTS */
+.div-blur{
+    
+    width: 100%;
+    height: 150vh;
+    /* overflow-y: hidden; */
+    background-color: #050019;
+    filter: blur(5px);
+    position: absolute;
+    top: 0px;
+
+}
+.card-purchase-modal {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    right: 100px;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid rgba(191, 191, 191, 0.1);
+    height: 60vh;
+    width: 40%;
+    margin: 100px auto;
+    align-items: center;
+}
+ #address-card {
+    resize: none;
+    width: 70%;
+    padding: 15px 0;
+    outline: none;
+    margin-top: 3px;
+    border-radius: 4px;
+    border: 1.5px solid rgba(198, 79, 0, 0.1);
+    background: transparent;
+    color: #fff;
+}
+#cardName {
+    width: 70%;
+    padding: 11px 0;
+    margin-top: 20px;
+    border-radius: 4px;
+    border: 1.5px solid rgba(198, 79, 0, 0.1);
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+#cardType, #cardIssuer {
+    width: 70.5%;
+    padding: 11px 0;
+    margin-top: 3px;
+    border-radius: 4px;
+    background: #050019;
+    border: 1.5px solid rgba(198, 79, 0, 0.1);
+    outline: none;
+    color: #c9c9c9;
+}
+#cardName::placeholder, #address-card::placeholder {
+    color: rgba(255, 255, 255, 1);
+}
+#btnGetCard {
+    color: #000;
+    background:  #C64F00;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    
+}
+#btnGetCard:hover {
+    border: 1px solid white;
+    color: #fff;
+}
+.card-purchase-terms {
+    margin-top: 10px;
+
+}
+.card-purchase-terms > span {
+    font-size: 12px;
+    color: #fff;
+}
+.card-purchase-container {
+    display: none;
+}
+/* CARD PURCHASE MODAL ENDS */
+
+
+/* AIRTIME & DATA TOPUP STARTS */
+.airtime-div-blur{
+    width: 100%;
+    height: 150vh;
+    /* overflow-y: hidden; */
+    background-color: #050019;
+    filter: blur(5px);
+    position: absolute;
+    top: 0;
+}
+.airtime-purchase-modal {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    right: 100px;
+    border: 1px solid rgba(191, 191, 191, 0.1);
+    width: 40%;
+    background: /* #5B75CB */ #050019;
+    margin: 100px auto; 
+}
+.providers-logo {
+    display: flex;
+    justify-content: space-around; 
+}
+.airtime-purchase-container {
+    display: none;
+}
+#providers-logo {
+    height: 50px;
+    width: 50px;
+}
+.mtn-logo {
+    border-radius: 30px;
+}
+#select-provider, #select-provider-data, #select-service-data, #select-service, #airtime-amount, #data-plan, #user-mobile-number, #user-mobile-number-data {
+    width: 100%;
+    padding: 11px 0;
+    margin-top: 3px;
+    border-radius: 2px;
+    background-color: #050019;
+    border: 1.5px solid rgba(198, 79, 0, 0.15);
+    outline: none;   
+    color: #fff;
+}
+.airtime-content > label, .data-content > label {
+    color: #ebebeb;
+}
+.airtime-content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 80px;
+}
+.data-content {
+    display: none;
+    flex-direction: column;
+    margin: 20px 80px;
+}
+input::-webkit-outer-spin-button, ::-webkit-inner-spin-button {
+    display: none;
+}
+#purchaseAirtime {
+    padding: 8px 10px;
+    margin-top: 10px;
+    margin-left: 20%;
+    background-color: #C64F00;
+    border: none;
+    border-radius: 2px;
+    font-weight: 600;
+} 
+#purchaseAirtime:hover{
+    border: 1px solid #fff;
+    color: #fff;
+}
+#purchaseData {
+    padding: 8px 10px;
+    margin-top: 10px;
+    margin-left: 20%;
+    background-color: #C64F00;
+    border: none;
+    border-radius: 2px;
+    font-weight: 600;
+} 
+#purchaseData:hover{
+    border: 1px solid #fff;
+    color: #fff;
+}
+#getData {
+    margin-top: 10px;
+    padding: 8px 10px;
+    margin-left: 5px;
+    background-color: #C64F00;
+    border: none;
+    border-radius: 2px;
+    font-weight: 600;
+}
+#getData:hover {
+    border: 1px solid #fff;
+    color: #fff;
+}
+#back {
+    margin-top: 10px;
+    padding: 8px 10px;
+    margin-left: 5px;
+    background-color: #C64F00;
+    border: none;
+    border-radius: 2px;
+    font-weight: 600;
+}
+#back:hover {
+    border: 1px solid #fff;
+    color: #fff;
+}
+label{
+    margin-top: 10px;
+}
+
+/* AIRTIME & DATA TOPUP ENDS */

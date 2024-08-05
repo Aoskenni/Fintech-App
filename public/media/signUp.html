@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signUp.css">
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    
+    <title>SignUp</title>
+</head>
+<body>
+    <div class="container">
+        <div class="imgSection">
+            <div class="mobile">
+                <div class="mobile-screen">
+                    <div class="camera"></div>
+                </div>
+            </div>
+        </div>
+        <div class="content-section">
+            <div class="sign-container">
+                <button id="signup" onclick="signUpButton()">Sign Up</button>
+                <button id="signIn" onclick="signInButton()">Sign In</button>
+            </div>
+            <form action="" id="form-signUp">
+            <div class="signup-form">
+                <!-- <label for="name">Name</label> -->
+                <input type="text" placeholder="Full Name" id="name">
+                <!-- <label for="email">Email</label> -->
+                <input type="email" placeholder="Email Address" id="email">
+                <label for="gender"><small>? select gender</small></label>
+                <select name="" id="gender">
+                    <option value=""></option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <!-- <label for="number">Mobile Number</label> -->
+                <input type="number" id="number" placeholder="Phone Number">
+                <!-- <label for="address">Address</label> -->
+                <textarea name="" cols="" rows="" placeholder="Address" id="address-signup"></textarea>
+                <!-- <label for="age">Age</label> -->
+                <input type="number" id="age" placeholder="Age">
+                <label for="Account"><small>? account type</small></label>
+                <select name="" id="account">
+                    <option value=""></option>
+                    <option value="">Kiddies Account</option>
+                    <option value="">Savings Account</option>
+                    <option value="">Current Account</option>
+                </select>
+                <!-- <label for="username">Username</label> -->
+                <input type="text" id="username" placeholder="Username">
+                <!-- <label for="password">Password</label> -->
+                <input type="password" id="password" placeholder=" Create Password">
+               
+           
+                <div class="terms-conditions"><span>By clicking the checkbox you agree to our <a href="">terms and conditions</a></span>
+                <input type="checkbox" id="termsConditions"></div>
+                <button type="" id="signUpSubmit" onclick="signUp(event)">Sign Up</button>
+            </div>
+            </form>
+
+            <form action="" id="form-signIn">
+            <div class="sign-in">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Email Address" class="emailSignIn" id="email">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">
+                <button type="submit" id="signInSubmit" onclick="logIn(event)">Sign In</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    // Form details
+    let fullname = document.getElementById("name");
+        let email = document.getElementById("email");
+        let gender = document.getElementById("gender");
+        let number = document.getElementById("number");
+        let address = document.getElementById("address");
+        let age = document.getElementById("age");
+        let accountType = document.getElementById("account");
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+//Form details end
+        let signIn = document.querySelector('.sign-in');
+        let formSignUp = document.getElementById('form-signUp');
+        let formSignIn = document.getElementById('form-signIn');
+        let signUpForm = document.querySelector('.signup-form');
+        let mobileScreen = document.querySelector('.mobile-screen')
+        function signUpButton () {
+            formSignIn.style.display = 'none';
+            formSignUp.style.display = 'flex'
+        }
+
+        function signInButton () {
+            formSignIn.style.display = 'flex';
+            formSignUp.style.display = 'none';
+        }
+</script>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signUp.css" />
+    <title>SignUp</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="imgSection">
+            <div class="mobile">
+                <div class="mobile-screen">
+                    <div class="camera"></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="content-section">
+            <div class="sign-container">
+                <button id="signup">Sign Up</button>
+                <a href="signIn.html"><button id="signIn">Sign In</button></a>
+            </div>
+            <form action="" id="form">
+                <div class="signup-form">
+                    <input type="text" placeholder="Full Name" id="name" />
+                    <input type="email" placeholder="Email Address" id="email" />
+                    <label for="gender"><small>? select gender</small></label>
+                    <select name="" id="gender">
+                        <option value=""></option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <input type="number" id="number" placeholder="Phone Number" />
+                    <input type="number" id="age" placeholder="Age" />
+                    <label for="Account"><small>? account type</small></label>
+                    <select name="" id="account">
+                        <option value=""></option>
+                        <option value="">Kiddies Account</option>
+                        <option value="">Savings Account</option>
+                        <option value="">Current Account</option>
+                    </select>
+                    <input type="password" id="password" placeholder=" Create Password" />
+                </div>
+                <div class="terms-conditions">
+                    <span>By clicking the checkbox you agree to our
+                        <a href="">terms and conditions</a></span>
+                    <input type="checkbox" id="termsConditions" />
+                </div>
+                <input type="submit" value="Sign Up" id="signUpSubmit" />
+            </form>
+        </div>
+    </div>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            signInWithEmailAndPassword,
+            sendEmailVerification
+        } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCU8HvsDtSPrWrmqhsVpsfNEmR-I1UzKc0",
+            authDomain: "gopayfintech-ef64a.firebaseapp.com",
+            projectId: "gopayfintech-ef64a",
+            storageBucket: "gopayfintech-ef64a.appspot.com",
+            messagingSenderId: "481508257911",
+            appId: "1:481508257911:web:647c06c33164ebafbe5672"
+        };
+
+        //initialize firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        let email = document.getElementById('email');
+        let password = document.getElementById('password');
+        let signUp = document.getElementById('signUpSubmit');
+        let displayName = document.getElementById('name');
+
+        signUp.addEventListener('click', function (event) {
+            event.preventDefault(); // prevent form submission
+            createUserWithEmailAndPassword(auth, email.value, password.value)
+                .then((userCredential) => {
+                    // Signed up 
+                    const user = userCredential.user;
+                    // ...
+                    console.log(user);
+                    alert('Registration Successful');
+                    if (user) {
+                        
+                        window.location.href = "signIn.html";
+                    }
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert(`${errorCode} ${errorMessage}`);
+                    // ..
+                });
+
+        })
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap');
+
+body {
+    color: #ffffff;
+   background: url(media/design-1304337_1920.png)  no-repeat center;  
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+   font-family: 'poppin', sans-serif;
+}
+a {
+    text-decoration: none;
+    
+}
+.container {
+   
+    height: 100vh;
+    color: #000;
+    background-color: rgb(5, 0, 25, 0.7) ;
+    
+}
+.header {
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    font-family: 'poppins';
+    border-bottom: 5px solid #C64F00;
+
+}
+.logo-container {
+    /* background:  red;  */
+    width: 20%;
+    height: 70px;
+}
+#logo {
+    height: 90px;
+    width: 100px;
+    margin-top: -18px;
+}
+.header-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.app-btn {
+    height: 30px;
+    margin-top: 13px;
+    background: rgba(198, 79, 0, 1);
+    border-radius: 15px;
+    padding: 5px 15px;
+    border: none;
+    color: rgb(226, 221, 221);
+    font-family: 'poppins';
+}
+/* .mobile {
+    height: 520px;
+    width: 250px;
+    background: black;
+    margin-top: 5px;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+.mobile-screen {
+    background: linear-gradient(rgb(223,119,129), rgb(47,117,228));
+    height: 515px;
+    width: 240px;
+    border-radius: 20px;
+    margin-left: 5px;
+    position: relative;
+
+}
+.camera {
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: black;
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 10px;
+    
+} */
+.header2 {
+    display: flex;
+    gap: 20px;
+    margin-top: 80px;
+    margin-left: 20px;
+    font-family: 'poppins';
+}
+.goPay-btn {
+    background: rgba(198, 79, 0, 1);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'poppins';
+    font-size: 12px;
+}
+.a-header2 {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+}
+.a-header2 > a {
+    color: #dedede;
+}
+.h1-p {
+    margin-top: 150px;
+    margin-left: 20px;
+    font-family: 'poppins';
+    font-size: 20px;
+
+}
+.h1-p > h1 {
+    color: #dedede;
+}
+.h1-p > p {
+    color: #dedede;
+    font-size: 12px;
+}
+.flex-container {
+    display: flex;
+}
+.left-flex {
+    width: 50%;
+    /* background: green; */
+    height: 100vh;
+}
+.right-flex {
+    /* background: yellow; */
+    height: ;
+    /* border: 1px solid red; */
+    width: 45%;
+    background: url(media/online-banking-4287719_1920-removebg-preview.png) no-repeat;
+    background-size: 100% 70vh;
+    margin-top: 100px;
+    border-top-left-radius: 20px;
+    animation-duration: 2s;
+    animation-name: slide;
+    animation-iteration-count: initial;
+
+}
+#right-flex-photo {
+    height: 80vh;
+    width: 90%;
+    margin-top: 80px;
+
+}
+.get-started {
+    margin-top: 60px;
+    margin-left: 150px;
+    animation-duration: 1s;
+    animation-name: button;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+
+}
+@keyframes button {
+    from {
+        margin-left: 100%;
+        width: 300%;
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+
+#getStarted {
+    padding: 10px 15px;
+    background: rgba(198, 79, 0, 1);
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+.tiny-circles {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(4, 4, 94);
+    /* animation */
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.circle2 {
+    animation-duration: 3s;
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background-color: #C64F00;
+}
+ /* Animation */
+@keyframes  slidein {
+    /* from {
+        margin-left: 100%;
+        width: 300%;
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+      } */
+/*       0% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    } */
+    from { 
+        transform: translate3d(0, 0, 0); 
+    } 
+    to { 
+        transform: translate3d(0, 200px, 0); 
+    } 
+}
+@keyframes bounce {
+    from { 
+         transform: translate3d(0, 200px, 0);
+    } 
+    to { 
+        transform: translate3d(0, 0, 0); 
+    } 
+}
+@keyframes  slide{
+    from {
+        margin-left: 50%;
+        width: 50%;
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 0%;
+      }
+    }
+    /* END */
+    .section1 {
+        
+        background: rgb(255, 255, 255);
+        color: #000;
+    }
+    #image1, #image2, #image3, #image4 {
+        height: 100px;
+        width: 50%;
+        margin: 10px 0;
+        
+    }
+    .img-section2 {
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        border-top: 3px solid rgb(240, 240, 240);
+        margin: 0 20px;
+        border-radius: 2px;
+        
+        
+        
+    }
+    .img-design {
+        /* border: 5px solid #040F40; */
+        width: 20%;
+        border-radius: 15px;
+        color: #040F40;
+        font-size: 13px
+        
+    }
+    .img-design h3 {
+        letter-spacing: 0.6px;
+    }
+    .section3 {
+        background: #ffffff;
+        margin: 40px 20px;
+
+    }
+    .section3 h2 {
+        color: #040F40;
+    
+    }
+    .h2-p {
+        margin: 20px 30px ;
+        font-family: 'poppins';
+        font-size: 13px;
+        color: #040F40;
+    }
+    .h2-p p {
+        color: #040F40;
+    }
+    
